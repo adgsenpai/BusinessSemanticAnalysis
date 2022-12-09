@@ -1,0 +1,62 @@
+{%extends 'base.html'%}
+{%block content%}
+<div class="row">
+    <div class="col">
+      <br>
+      <br>
+      <h1>Business Semantic Analysis</h1>
+      <p>Business Semantic Analysis is a tool that allows you to analyze the sentiment of a business based on the reviews of its customers.</p>
+      <p>Enter a business name below to get started.</p>
+      <!-- render a large search bar -->
+        <div class="d-flex">
+            <input list="businessList" id="businessSearchBar" class="form-control me-2" type="search" placeholder="Search" aria-label="Search" autocomplete="on">                
+            <button class="btn btn-outline-success" onclick="search()"  type="submit">Search</button>
+        </div>
+    </div>        
+    <datalist id="businessList">        
+    </datalist>        
+  </div>
+
+  <script>
+
+    const businessSearchBar = document.getElementById("businessSearchBar"); // get the search bar element
+    const businessList = document.getElementById("businessList"); // get the datalist element
+
+    const fetchBusinesses = () => { // fetch the businesses from the server
+        // post to /api/search 
+        const data = {'query': businessSearchBar.value};
+        const response = fetch('/api/search', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data),
+        })
+        .then(response => response.json())
+        .then(data => {
+            // add the businesses to the datalist
+            data = data['names'];
+            businessList.innerHTML = "";
+            for (let i = 0; i < data.length; i++) {
+
+                const option = document.createElement("option");
+                option.value = data[i];
+                businessList.appendChild(option);
+            }
+            
+        })                 
+        .catch((error) => {
+            console.error('Error:', error);
+        });
+        
+    }
+    // add a listener event to the search bar, when the user types in the search bar, the search bar will call the function
+    businessSearchBar.addEventListener("input", fetchBusinesses);        
+
+    const search = () => { // search for the business
+        // redirect user to /search/<queryterm>
+        window.location.href = "/search/" + encodeURIComponent(businessSearchBar.value); //encode the query term                 
+    }
+
+  </script>
+{%endblock%}

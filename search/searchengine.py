@@ -12,4 +12,5 @@ def search(query):
 
 if __name__ == '__main__':
     # test the function
-    print(search('game'))    
+    results = search('game')
+    print({'names': [result['name'] for result in results],'slugs': [result['slug'] for result in results]})

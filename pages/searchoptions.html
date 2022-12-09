@@ -1,0 +1,28 @@
+{%extends 'base.html'%}
+{%block content%}
+
+<div id="resultsDOM"></div>
+
+
+<script>
+    var data = {{query|safe}};
+    data = data.results;
+    if (data.length == 0) {
+        document.getElementById("resultsDOM").innerHTML = "<h1>No results found</h1>";
+    } else {
+        document.getElementById("resultsDOM").innerHTML = "<br><h1>Results</h1><br>";
+        // loop via data['names'] and slugs
+        for (let i = 0; i < data['names'].length; i++) {
+            const name = data['names'][i];
+            const slug = data['slugs'][i];
+            document.getElementById("resultsDOM").innerHTML += `<div class="card">    
+                                                                <div class="card-body">
+                                                                <h5 class="card-title">${name}</h5>      
+                                                                <a href="${slug}" class="btn btn-primary">View Information</a>
+                                                                </div>
+                                                                </div>`
+        }
+    }
+</script>
+
+{%endblock%}
