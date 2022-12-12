@@ -1,0 +1,91 @@
+{%extends 'base.html'%}
+{%block content%}
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<link rel="stylesheet" href="https://cdn.datatables.net/1.13.1/css/dataTables.bootstrap5.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css">
+<script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.1/js/dataTables.bootstrap5.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/js/bootstrap.min.js"></script>
+
+<h5> Semantic Analysis for {{businessDetails.name}} </h5>
+
+<br>
+<img src="{{industryLogo}}" class="rounded-circle" alt="profile image" width="100" height="100">
+<br>
+<br>
+
+<!-- render info for business -->
+
+<div class="row">
+    <div class="col-sm-3">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Business Info</h5>
+                <p class="card-text">Name: {{businessDetails.name}}</p>
+                <p class="card-text">Address: {{businessDetails.address}}</p>
+                <p class="card-text">Description: {{businessDetails.description}}</p>
+                <p class="card-text">Phone: {{businessDetails.tel}}</p>
+                <p class="card-text">Website: {{businessDetails.website}}</p>                
+                <p class="card-text">Email: {{businessDetails.email}}</p>
+                
+            </div>
+        </div>
+    </div> 
+    <div class="col-sm-3">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Social Media</h5>
+                <p class="card-text">Facebook: {{businessDetails.facebook}}</p>
+                <p class="card-text">Twitter: {{businessDetails.twitter}}</p>
+                <p class="card-text">Instagram: {{businessDetails.instagram}}</p>
+                <p class="card-text">LinkedIn: {{businessDetails.linkedin}}</p>
+            </div>
+        </div>
+    </div>  
+</div>
+
+
+
+<div class="row">
+    <div class="col-sm-3">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Scoring</h5>
+                <p class="card-text">Rating: {{avg_review_rating}} out of 5</p>
+                <p class="card-text">Trust Score: {{trustIndex}}</p>
+            </div>
+        </div>
+    </div> 
+    <div class="col-sm-3">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Key Phrases</h5>
+                <p class="card-text">Key Phrases: {{keywords}}</p>
+            </div>
+        </div>
+    </div> 
+    <div class="col-sm-3">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Sentiment</h5>
+                <p class="card-text">Positive: {{positive_count}}</p>
+                <p class="card-text">Negative: {{negative_count}}</p>                
+                <p class="card-text">Neutral: {{neutral_count}}</p>
+            </div>
+        </div>
+    </div>    
+</div>
+
+<br>
+<br>
+
+
+{{htmlcode|safe}}
+
+<script>
+$(document).ready(function () {
+    $('#data').DataTable();
+});
+</script>
+{%endblock%}
+

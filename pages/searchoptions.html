@@ -14,11 +14,14 @@
         // loop via data['names'] and slugs
         for (let i = 0; i < data['names'].length; i++) {
             const name = data['names'][i];
+            // encode the name to make it safe for the url
+            var encodedName = encodeURIComponent(name);
             const slug = data['slugs'][i];
+
             document.getElementById("resultsDOM").innerHTML += `<div class="card">    
                                                                 <div class="card-body">
                                                                 <h5 class="card-title">${name}</h5>      
-                                                                <a href="${slug}" class="btn btn-primary">View Information</a>
+                                                                <a href="/viewsemanticanalysis/${encodedName}/${slug}" class="btn btn-primary">View Information</a>
                                                                 </div>
                                                                 </div>`
         }
