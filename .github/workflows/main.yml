@@ -5,6 +5,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:      
       - uses: actions/checkout@v2
+      - name: Install Requirements
+        run: |
+          pip3 install -r requirements.txt
       - name: Start Job
         run: |
           python3 GenerateDF.py         
