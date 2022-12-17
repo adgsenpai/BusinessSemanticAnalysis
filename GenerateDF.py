@@ -63,11 +63,28 @@ def GenerateDf(companynames,pageno):
     for companyname in companynames:
         i+=1
         print("Processing company: "+str(i)+ " of "+str(len(companynames)))        
-        df = pd.concat([df,GetReviewsRating(companyname,pageno,1)])
-        df = pd.concat([df,GetReviewsRating(companyname,pageno,2)])
-        df = pd.concat([df,GetReviewsRating(companyname,pageno,3)])
-        df = pd.concat([df,GetReviewsRating(companyname,pageno,4)])
-        df = pd.concat([df,GetReviewsRating(companyname,pageno,5)])
+        try:
+            df = pd.concat([df,GetReviewsRating(companyname,pageno,1)])
+        except:
+            pass
+        try:
+            df = pd.concat([df,GetReviewsRating(companyname,pageno,2)])
+        except:
+            pass
+        try:
+            df = pd.concat([df,GetReviewsRating(companyname,pageno,3)])
+        except:
+            pass
+        try:
+            df = pd.concat([df,GetReviewsRating(companyname,pageno,4)])
+        except:
+            pass
+        try:
+            df = pd.concat([df,GetReviewsRating(companyname,pageno,5)])
+        except:
+            pass
+        
+        
     return df
 
 
