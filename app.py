@@ -38,8 +38,8 @@ def searchterm(queryterm):
         query =  {'results': []}
     return render_template('searchoptions.html',query=query)
  
-@app.route('/viewsemanticanalysis/<encodedname>/<slug>')
-def viewsemanticanalysis(encodedname,slug):
+@app.route('/viewsentimentanalysis/<encodedname>/<slug>')
+def viewsentimentanalysis(encodedname,slug):
     try:
         df = analysis.GetReviews(slug,5)
         newdf , score, avg_review_rating = analysis.Analyze(df)     
@@ -77,7 +77,7 @@ def viewsemanticanalysis(encodedname,slug):
         positive_count = 0
         negative_count = 0
         neutral_count = 0
-    return render_template('semanticanalysis.html',slug=slug,encodedname=encodedname,score=score,avg_review_rating=avg_review_rating,htmlcode=htmlcode,industryLogo=industryLogo,keywords=keywords,trustIndex=trustIndex,positive_count=positive_count,negative_count=negative_count,neutral_count=neutral_count,businessDetails=businessDetails)
+    return render_template('sentimentanalysis.html',slug=slug,encodedname=encodedname,score=score,avg_review_rating=avg_review_rating,htmlcode=htmlcode,industryLogo=industryLogo,keywords=keywords,trustIndex=trustIndex,positive_count=positive_count,negative_count=negative_count,neutral_count=neutral_count,businessDetails=businessDetails)
 #running server on port 8000 - you can change the values here
 if __name__ == "__main__":
   app.run(host="0.0.0.0",port=8000,debug=True)

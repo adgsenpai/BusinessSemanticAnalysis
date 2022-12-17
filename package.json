@@ -1,5 +1,5 @@
 {
-  "name": "businesssemanticanalysis",
+  "name": "businesssentimentanalysis",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,12 +8,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/adgsenpai/BusinessSemanticAnalysis.git"
+    "url": "git+https://github.com/adgsenpai/BusinesssentimentAnalysis.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/adgsenpai/BusinessSemanticAnalysis/issues"
+    "url": "https://github.com/adgsenpai/BusinesssentimentAnalysis/issues"
   },
-  "homepage": "https://github.com/adgsenpai/BusinessSemanticAnalysis#readme"
+  "homepage": "https://github.com/adgsenpai/BusinesssentimentAnalysis#readme"
 }
