@@ -1,1 +1,4 @@
 text2emotion
+pandas
+requests
+numpy
