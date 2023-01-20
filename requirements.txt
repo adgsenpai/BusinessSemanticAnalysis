@@ -2,3 +2,4 @@ text2emotion
 pandas
 requests
 numpy
+spacy
