@@ -1,0 +1,537 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\newenvironment{Shaded}{}{}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{#1}}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.49,0.56,0.16}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{#1}}
+\newcommand{\BuiltInTok}[1]{\textcolor[rgb]{0.00,0.50,0.00}{#1}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.53,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.56,0.13,0.00}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.73,0.13,0.13}{\textit{#1}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.02,0.16,0.49}{#1}}
+\newcommand{\ImportTok}[1]{\textcolor[rgb]{0.00,0.50,0.00}{\textbf{#1}}}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.40,0.40,0.40}{#1}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.74,0.48,0.00}{#1}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.73,0.40,0.53}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.10,0.09,0.49}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{}
+
+\begin{document}
+
+\hypertarget{scraping-hello-peter}{%
+\section{Scraping Hello Peter}\label{scraping-hello-peter}}
+
+\begin{itemize}
+\tightlist
+\item
+  In this notebook i will be scraping the Hello Peter website for
+  reviews of a specific company.
+\end{itemize}
+
+Consider a company name on \texttt{Hello\ Peter}
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{Telkom}
+\end{itemize}
+
+Discovering from the website hellopeter.com it uses a microservice
+architecture. The reviews are stored in a database and the website is
+just a frontend to the database. There is a normal website hosting the
+frontend and a separate website hosting the API.
+
+The API is hosted on \texttt{api.hellopeter.com} and the frontend is
+hosted on \texttt{hellopeter.com}
+
+Therefore running web diagnostics on the API will give us the
+information we need.
+
+I have reversed engineered the API. To get reviews for a specific
+company you need to make a \texttt{GET} request to the following
+endpoint:
+
+\texttt{https://api.hellopeter.com/consumer/business/\textless{}companynamewithdash\textgreater{}/reviews?page=\textless{}pagenumber\textgreater{}}
+
+Quite interesting to note that the company name is in the URL and not in
+the query parameters.
+
+Anyway our life is easy now. We just need to make a \texttt{GET} request
+to the endpoint and we will get the reviews for the company.
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{Telkom}
+\end{itemize}
+
+\begin{verbatim}
+https://api.hellopeter.com/consumer/business/telkom/reviews?page=1 to get the first page of reviews
+...
+...
+https://api.hellopeter.com/consumer/business/telkom/reviews?page=n to get the nth page of reviews
+\end{verbatim}
+
+\hypertarget{before-we-start}{%
+\paragraph{Before we start}\label{before-we-start}}
+
+Basic imports
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ImportTok{import}\NormalTok{ pandas }\ImportTok{as}\NormalTok{ pd}
+\ImportTok{import}\NormalTok{ numpy }\ImportTok{as}\NormalTok{ np }\CommentTok{\# I have found out that pandas sucks when working with large data sets apparently numpy is better when working with large data sets}
+\CommentTok{\# Assumption is that we might get comments 100k or more}
+\ImportTok{import}\NormalTok{ requests }\CommentTok{\# for making http requests}
+\ImportTok{import}\NormalTok{ json }\CommentTok{\# for parsing json data}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{general-solution}{%
+\subsubsection{General Solution}\label{general-solution}}
+
+I am making a function to get the reviews for a specific company. The
+function will take in the company name and the number of pages to
+scrape.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{def}\NormalTok{ GetReviews(companyname,pageno):}
+    \CommentTok{\# convert company name where spaces are replaced with hyphens}
+\NormalTok{    df }\OperatorTok{=}\NormalTok{ pd.DataFrame()}
+\NormalTok{    companyname}\OperatorTok{=}\NormalTok{companyname.replace(}\StringTok{" "}\NormalTok{,}\StringTok{"{-}"}\NormalTok{)}
+\NormalTok{    url }\OperatorTok{=} \StringTok{\textquotesingle{}https://api.hellopeter.com/consumer/business/\textquotesingle{}}\OperatorTok{+}\NormalTok{companyname}\OperatorTok{+}\StringTok{\textquotesingle{}/reviews?page=\textquotesingle{}}\OperatorTok{+}\BuiltInTok{str}\NormalTok{(}\DecValTok{1}\NormalTok{)}
+\NormalTok{    page }\OperatorTok{=}\NormalTok{ requests.get(url)}
+\NormalTok{    jsondata}\OperatorTok{=}\NormalTok{json.loads(page.text)    }
+\NormalTok{    last\_page}\OperatorTok{=}\NormalTok{jsondata[}\StringTok{\textquotesingle{}last\_page\textquotesingle{}}\NormalTok{]        }
+\NormalTok{    df }\OperatorTok{=}\NormalTok{ df.from\_records(jsondata[}\StringTok{\textquotesingle{}data\textquotesingle{}}\NormalTok{])}
+\NormalTok{    i }\OperatorTok{=} \DecValTok{1}
+
+    \ControlFlowTok{while}\NormalTok{ i }\OperatorTok{\textless{}=}\NormalTok{ last\_page:}
+        \ControlFlowTok{if}\NormalTok{ pageno }\OperatorTok{==} \DecValTok{0}\NormalTok{:}
+            \BuiltInTok{print}\NormalTok{(}\StringTok{"Processing page: "}\OperatorTok{+}\BuiltInTok{str}\NormalTok{(i)}\OperatorTok{+} \StringTok{" of "}\OperatorTok{+}\BuiltInTok{str}\NormalTok{(last\_page))}
+            \ControlFlowTok{pass}
+        \ControlFlowTok{else}\NormalTok{:}
+            \BuiltInTok{print}\NormalTok{(}\StringTok{"Processing page: "}\OperatorTok{+}\BuiltInTok{str}\NormalTok{(i)}\OperatorTok{+} \StringTok{" of "}\OperatorTok{+}\BuiltInTok{str}\NormalTok{(pageno))}
+            \ControlFlowTok{if}\NormalTok{ i }\OperatorTok{==}\NormalTok{ pageno:}
+                \ControlFlowTok{break}
+        
+\NormalTok{        i }\OperatorTok{=}\NormalTok{ i }\OperatorTok{+} \DecValTok{1}
+\NormalTok{        url }\OperatorTok{=} \StringTok{\textquotesingle{}https://api.hellopeter.com/consumer/business/\textquotesingle{}}\OperatorTok{+}\NormalTok{companyname}\OperatorTok{+}\StringTok{\textquotesingle{}/reviews?page=\textquotesingle{}}\OperatorTok{+}\BuiltInTok{str}\NormalTok{(i)}
+\NormalTok{        page }\OperatorTok{=}\NormalTok{ requests.get(url)}
+\NormalTok{        jsondata}\OperatorTok{=}\NormalTok{json.loads(page.text)}
+\NormalTok{        df }\OperatorTok{=}\NormalTok{ pd.concat([df,df.from\_records(jsondata[}\StringTok{\textquotesingle{}data\textquotesingle{}}\NormalTok{])])}
+        
+    \ControlFlowTok{return}\NormalTok{ df}
+
+\CommentTok{\# ill just do 100 pages for now}
+\NormalTok{df }\OperatorTok{=}\NormalTok{ GetReviews(}\StringTok{"telkom"}\NormalTok{,}\DecValTok{100}\NormalTok{)}
+\NormalTok{df.head()}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+Processing page: 1 of 100
+Processing page: 2 of 100
+Processing page: 3 of 100
+Processing page: 4 of 100
+Processing page: 5 of 100
+Processing page: 6 of 100
+Processing page: 7 of 100
+Processing page: 8 of 100
+Processing page: 9 of 100
+Processing page: 10 of 100
+Processing page: 11 of 100
+Processing page: 12 of 100
+Processing page: 13 of 100
+Processing page: 14 of 100
+Processing page: 15 of 100
+Processing page: 16 of 100
+Processing page: 17 of 100
+Processing page: 18 of 100
+Processing page: 19 of 100
+Processing page: 20 of 100
+Processing page: 21 of 100
+Processing page: 22 of 100
+Processing page: 23 of 100
+Processing page: 24 of 100
+Processing page: 25 of 100
+Processing page: 26 of 100
+Processing page: 27 of 100
+Processing page: 28 of 100
+Processing page: 29 of 100
+Processing page: 30 of 100
+Processing page: 31 of 100
+Processing page: 32 of 100
+Processing page: 33 of 100
+Processing page: 34 of 100
+Processing page: 35 of 100
+Processing page: 36 of 100
+Processing page: 37 of 100
+Processing page: 38 of 100
+Processing page: 39 of 100
+Processing page: 40 of 100
+Processing page: 41 of 100
+Processing page: 42 of 100
+Processing page: 43 of 100
+Processing page: 44 of 100
+Processing page: 45 of 100
+Processing page: 46 of 100
+Processing page: 47 of 100
+Processing page: 48 of 100
+Processing page: 49 of 100
+Processing page: 50 of 100
+Processing page: 51 of 100
+Processing page: 52 of 100
+Processing page: 53 of 100
+Processing page: 54 of 100
+Processing page: 55 of 100
+Processing page: 56 of 100
+Processing page: 57 of 100
+Processing page: 58 of 100
+Processing page: 59 of 100
+Processing page: 60 of 100
+Processing page: 61 of 100
+Processing page: 62 of 100
+Processing page: 63 of 100
+Processing page: 64 of 100
+Processing page: 65 of 100
+Processing page: 66 of 100
+Processing page: 67 of 100
+Processing page: 68 of 100
+Processing page: 69 of 100
+Processing page: 70 of 100
+Processing page: 71 of 100
+Processing page: 72 of 100
+Processing page: 73 of 100
+Processing page: 74 of 100
+Processing page: 75 of 100
+Processing page: 76 of 100
+Processing page: 77 of 100
+Processing page: 78 of 100
+Processing page: 79 of 100
+Processing page: 80 of 100
+Processing page: 81 of 100
+Processing page: 82 of 100
+Processing page: 83 of 100
+Processing page: 84 of 100
+Processing page: 85 of 100
+Processing page: 86 of 100
+Processing page: 87 of 100
+Processing page: 88 of 100
+Processing page: 89 of 100
+Processing page: 90 of 100
+Processing page: 91 of 100
+Processing page: 92 of 100
+Processing page: 93 of 100
+Processing page: 94 of 100
+Processing page: 95 of 100
+Processing page: 96 of 100
+Processing page: 97 of 100
+Processing page: 98 of 100
+Processing page: 99 of 100
+Processing page: 100 of 100
+\end{verbatim}
+
+\begin{verbatim}
+        id                               user_id           created_at  \
+0  4220709  189b4210-31fa-11e8-83f4-f23c91bb6188  2022-12-11 10:44:36   
+1  4220657  2ab58790-5e1c-11ea-84a8-633da5152604  2022-12-11 08:21:07   
+2  4220589  30c06500-2db3-11ed-9a2e-37d9f06d41d3  2022-12-10 23:51:47   
+3  4220221  fbc1cc90-f7d5-11e8-981e-d16280a3bb5a  2022-12-10 11:41:54   
+4  4220027  f1989af0-247d-11ed-9b4a-437238555a96  2022-12-10 07:25:59   
+
+  authorDisplayName       author authorAvatar  \
+0           michael      michael                
+1       Tintswalo M  Tintswalo M                
+2          Lulama R     Lulama R                
+3           Moosa M      Moosa M                
+4         Johanna B    Johanna B                
+
+                              author_id  \
+0  189b4210-31fa-11e8-83f4-f23c91bb6188   
+1  2ab58790-5e1c-11ea-84a8-633da5152604   
+2  30c06500-2db3-11ed-9a2e-37d9f06d41d3   
+3  fbc1cc90-f7d5-11e8-981e-d16280a3bb5a   
+4  f1989af0-247d-11ed-9b4a-437238555a96   
+
+                                 review_title  review_rating  \
+0                                 Telkom eish              1   
+1                                 Bad service              1   
+2  Telkom (9570 Rand To Terminate A ConTract)              1   
+3                                Telkom sucks              1   
+4                        BEST TELKOM EMPLOYEE              5   
+
+                                      review_content  ...       industry_name  \
+0  We upgraded our Telkom LTE to uncapped a few m...  ...  Telecommunications   
+1  I use Adsl and I haven't had connectivity from...  ...  Telecommunications   
+2  They are Telling Me To Pay R9570 To Cancel A C...  ...  Telecommunications   
+3  Trying to resolve a billing  issue with telkom...  ...  Telecommunications   
+4  I am writing this as one very happy (now ex-) ...  ...  Telecommunications   
+
+        industry_slug status_id  nps_rating   source is_reported  \
+0  telecommunications         1         NaN  WEBSITE       False   
+1  telecommunications         1         NaN  WEBSITE       False   
+2  telecommunications         1         NaN  WEBSITE       False   
+3  telecommunications         1         NaN  WEBSITE       False   
+4  telecommunications         1         NaN  WEBSITE       False   
+
+  business_reporting author_created_date author_total_reviews_count  \
+0               None          2014-02-03                          2   
+1               None          2020-03-04                          9   
+2               None          2022-09-06                          4   
+3               None          2018-12-04                          2   
+4               None          2022-08-25                          2   
+
+   attachments  
+0           []  
+1           []  
+2           []  
+3           []  
+4           []  
+
+[5 rows x 27 columns]
+\end{verbatim}
+
+\hypertarget{lets-check-shape-of-the-data}{%
+\subsubsection{Lets check shape of the
+data}\label{lets-check-shape-of-the-data}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# shape of the data frame}
+\NormalTok{df.shape}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+(1100, 27)
+\end{verbatim}
+
+\hypertarget{saving-data-for-future-use}{%
+\subsubsection{Saving data for future
+use}\label{saving-data-for-future-use}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# make a directory to store the data}
+\ImportTok{import}\NormalTok{ os}
+\ControlFlowTok{try}\NormalTok{:}
+\NormalTok{    os.mkdir(}\StringTok{"data"}\NormalTok{)}
+\ControlFlowTok{except}\NormalTok{:}
+    \ControlFlowTok{pass}
+
+\CommentTok{\# save the data frame to a csv file}
+\NormalTok{df.to\_csv(}\StringTok{"data/telkom.csv"}\NormalTok{,index}\OperatorTok{=}\VariableTok{False}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{evaluation-of-business-reviews}{%
+\subsubsection{Evaluation of Business
+Reviews}\label{evaluation-of-business-reviews}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ImportTok{from}\NormalTok{ vaderSentiment.vaderSentiment }\ImportTok{import}\NormalTok{ SentimentIntensityAnalyzer}
+\NormalTok{sentiment }\OperatorTok{=}\NormalTok{ SentimentIntensityAnalyzer()}
+
+\CommentTok{\# iterate over the data frame }
+\ControlFlowTok{for}\NormalTok{ index, row }\KeywordTok{in}\NormalTok{ df.iterrows():}
+\NormalTok{    currentReview }\OperatorTok{=}\NormalTok{ row[}\StringTok{\textquotesingle{}review\_title\textquotesingle{}}\NormalTok{]}\OperatorTok{+}\StringTok{\textquotesingle{}}\CharTok{\textbackslash{}n}\StringTok{\textquotesingle{}}\OperatorTok{+}\NormalTok{row[}\StringTok{\textquotesingle{}review\_content\textquotesingle{}}\NormalTok{]}
+\NormalTok{    sentimentScore }\OperatorTok{=}\NormalTok{ sentiment.polarity\_scores(currentReview)}
+\NormalTok{    df.loc[index,}\StringTok{\textquotesingle{}compound\textquotesingle{}}\NormalTok{] }\OperatorTok{=}\NormalTok{ sentimentScore[}\StringTok{\textquotesingle{}compound\textquotesingle{}}\NormalTok{]}
+\NormalTok{    df.loc[index,}\StringTok{\textquotesingle{}neg\textquotesingle{}}\NormalTok{] }\OperatorTok{=}\NormalTok{ sentimentScore[}\StringTok{\textquotesingle{}neg\textquotesingle{}}\NormalTok{]}
+\NormalTok{    df.loc[index,}\StringTok{\textquotesingle{}neu\textquotesingle{}}\NormalTok{] }\OperatorTok{=}\NormalTok{ sentimentScore[}\StringTok{\textquotesingle{}neu\textquotesingle{}}\NormalTok{]}
+\NormalTok{    df.loc[index,}\StringTok{\textquotesingle{}pos\textquotesingle{}}\NormalTok{] }\OperatorTok{=}\NormalTok{ sentimentScore[}\StringTok{\textquotesingle{}pos\textquotesingle{}}\NormalTok{]}
+
+\ControlFlowTok{for}\NormalTok{ index,row }\KeywordTok{in}\NormalTok{ df.iterrows():}
+    \ControlFlowTok{if}\NormalTok{ row[}\StringTok{\textquotesingle{}compound\textquotesingle{}}\NormalTok{] }\OperatorTok{\textgreater{}=} \FloatTok{0.05}\NormalTok{:}
+\NormalTok{        df.loc[index,}\StringTok{\textquotesingle{}sentiment\textquotesingle{}}\NormalTok{] }\OperatorTok{=} \StringTok{\textquotesingle{}positive\textquotesingle{}}
+    \ControlFlowTok{elif}\NormalTok{ row[}\StringTok{\textquotesingle{}compound\textquotesingle{}}\NormalTok{] }\OperatorTok{\textless{}=} \OperatorTok{{-}}\FloatTok{0.05}\NormalTok{:}
+\NormalTok{        df.loc[index,}\StringTok{\textquotesingle{}sentiment\textquotesingle{}}\NormalTok{] }\OperatorTok{=} \StringTok{\textquotesingle{}negative\textquotesingle{}}
+    \ControlFlowTok{else}\NormalTok{:}
+\NormalTok{        df.loc[index,}\StringTok{\textquotesingle{}sentiment\textquotesingle{}}\NormalTok{] }\OperatorTok{=} \StringTok{\textquotesingle{}neutral\textquotesingle{}}
+
+\CommentTok{\# count the number of positive, negative and neutral reviews}
+\BuiltInTok{print}\NormalTok{(df[}\StringTok{\textquotesingle{}sentiment\textquotesingle{}}\NormalTok{].value\_counts())}
+
+\CommentTok{\# print percentage of positive, negative and neutral reviews}
+\BuiltInTok{print}\NormalTok{(df[}\StringTok{\textquotesingle{}sentiment\textquotesingle{}}\NormalTok{].value\_counts(normalize}\OperatorTok{=}\VariableTok{True}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+negative    1100
+Name: sentiment, dtype: int64
+negative    1.0
+Name: sentiment, dtype: float64
+\end{verbatim}
+
+\begin{verbatim}
+         id                               user_id           created_at  \
+0   4220709  189b4210-31fa-11e8-83f4-f23c91bb6188  2022-12-11 10:44:36   
+1   4220657  2ab58790-5e1c-11ea-84a8-633da5152604  2022-12-11 08:21:07   
+2   4220589  30c06500-2db3-11ed-9a2e-37d9f06d41d3  2022-12-10 23:51:47   
+3   4220221  fbc1cc90-f7d5-11e8-981e-d16280a3bb5a  2022-12-10 11:41:54   
+4   4220027  f1989af0-247d-11ed-9b4a-437238555a96  2022-12-10 07:25:59   
+..      ...                                   ...                  ...   
+6   4107022  19deed74-31fa-11e8-83f4-f23c91bb6188  2022-09-26 12:32:20   
+7   4107004  253f4390-36f0-11eb-9146-d10abea54616  2022-09-26 12:22:20   
+8   4106907  223e5054-31fa-11e8-83f4-f23c91bb6188  2022-09-26 11:35:43   
+9   4106748  dd819d30-3d74-11ed-a337-45091a2889d9  2022-09-26 10:35:59   
+10  4106664  d12633e0-3cbf-11e8-9cda-c34368cdd20e  2022-09-26 10:00:25   
+
+   authorDisplayName       author authorAvatar  \
+0            michael      michael                
+1        Tintswalo M  Tintswalo M                
+2           Lulama R     Lulama R                
+3            Moosa M      Moosa M                
+4          Johanna B    Johanna B                
+..               ...          ...          ...   
+6               Ivan         Ivan                
+7          Nurhaan C    Nurhaan C                
+8             Rehana       Rehana                
+9            DAVID A      DAVID A                
+10          Leandi K     Leandi K                
+
+                               author_id  \
+0   189b4210-31fa-11e8-83f4-f23c91bb6188   
+1   2ab58790-5e1c-11ea-84a8-633da5152604   
+2   30c06500-2db3-11ed-9a2e-37d9f06d41d3   
+3   fbc1cc90-f7d5-11e8-981e-d16280a3bb5a   
+4   f1989af0-247d-11ed-9b4a-437238555a96   
+..                                   ...   
+6   19deed74-31fa-11e8-83f4-f23c91bb6188   
+7   253f4390-36f0-11eb-9146-d10abea54616   
+8   223e5054-31fa-11e8-83f4-f23c91bb6188   
+9   dd819d30-3d74-11ed-a337-45091a2889d9   
+10  d12633e0-3cbf-11e8-9cda-c34368cdd20e   
+
+                                         review_title  review_rating  \
+0                                         Telkom eish              1   
+1                                         Bad service              1   
+2          Telkom (9570 Rand To Terminate A ConTract)              1   
+3                                        Telkom sucks              1   
+4                                BEST TELKOM EMPLOYEE              5   
+..                                                ...            ...   
+6                        Worse customer service ever.              1   
+7                          The worst service provider              1   
+8   HELL with TELKOM: HELLKOM should be their new ...              1   
+9                       Fraudulent debit from Telkom.              1   
+10                                         Harassment              1   
+
+                                       review_content  ... is_reported  \
+0   We upgraded our Telkom LTE to uncapped a few m...  ...       False   
+1   I use Adsl and I haven't had connectivity from...  ...       False   
+2   They are Telling Me To Pay R9570 To Cancel A C...  ...       False   
+3   Trying to resolve a billing  issue with telkom...  ...       False   
+4   I am writing this as one very happy (now ex-) ...  ...       False   
+..                                                ...  ...         ...   
+6   Canceled a month-to-month contract 3 months ag...  ...       False   
+7   So I’ve got a contract with Telkom which is R4...  ...       False   
+8   I am so frustrated at the moment that NO ONE a...  ...       False   
+9   Never take any contract with telkom hatfield. ...  ...       False   
+10  I am getting almost daily phone calls for an i...  ...       False   
+
+   business_reporting author_created_date  author_total_reviews_count  \
+0                None          2014-02-03                           2   
+1                None          2020-03-04                           9   
+2                None          2022-09-06                           4   
+3                None          2018-12-04                           2   
+4                None          2022-08-25                           2   
+..                ...                 ...                         ...   
+6                None          2014-03-26                           1   
+7                None          2020-12-05                           6   
+8                None          2015-05-04                          15   
+9                None          2022-09-26                           1   
+10               None          2018-04-10                           3   
+
+   attachments compound    neg    neu    pos  sentiment  
+0           []  -0.6369  0.172  0.828  0.000   negative  
+1           []  -0.5223  0.153  0.719  0.128   negative  
+2           []  -0.2960  0.031  0.969  0.000   negative  
+3           []  -0.1646  0.038  0.934  0.028   negative  
+4           []  -0.9186  0.231  0.731  0.037   negative  
+..         ...      ...    ...    ...    ...        ...  
+6           []  -0.8566  0.076  0.898  0.027   negative  
+7           []  -0.8684  0.090  0.910  0.000   negative  
+8           []  -0.9180  0.096  0.846  0.058   negative  
+9           []  -0.5507  0.091  0.828  0.082   negative  
+10          []  -0.7115  0.122  0.844  0.034   negative  
+
+[1100 rows x 32 columns]
+\end{verbatim}
+
+\end{document}
